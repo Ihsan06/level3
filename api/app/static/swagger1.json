@@ -1,0 +1,166 @@
+{
+    "openapi" : "3.0.0",
+    "info" : {
+      "version" : "1.0.0",
+      "title" : "API-Documentation",
+      "description" : "API-Endpoints of the Prediction-Platform."
+    },
+    "tags" : [ {
+      "name" : "sales",
+      "description" : "Historic sales data"
+    }, {
+      "name" : "prediction",
+      "description" : "Prediction of future sales"
+    }, {
+      "name" : "location",
+      "description" : "Location of all stores"
+    }, {
+      "name" : "operational",
+      "description" : "Run & Upload new prediction value"
+    } ],
+    "paths" : {
+      "/api/sales" : {
+        "get" : {
+          "tags" : [ "sales" ],
+          "summary" : "Get all sales",
+          "description" : "Get all sales data with a intial pagesize of 100 and optional filtering for each parameter."
+        },
+        "post" : {
+          "tags" : [ "sales" ],
+          "summary" : "Post new sales",
+          "description" : "Post new sales data according to the sales class."
+        },
+        "put" : {
+          "tags" : [ "sales" ],
+          "summary" : "Update sales",
+          "description" : "Update sales data with the primary focus of putting historic predictions."
+        }
+      },
+      "/api/sales/id/<id>" : {
+        "get" : {
+          "tags" : [ "sales" ],
+          "summary" : "Get single sale",
+          "description" : "Get single transaction data queried by ID."
+        },
+        "put" : {
+          "tags" : [ "sales" ],
+          "summary" : "Update single sale",
+          "description" : "Update single transaction data queried by ID."
+        },
+        "delete" : {
+          "tags" : [ "sales" ],
+          "summary" : "Delete single sale",
+          "description" : "Delete single transaction data queried by ID."
+        }
+      },
+      "/api/sales/amount" : {
+        "get" : {
+          "tags" : [ "sales" ],
+          "summary" : "Get amount",
+          "description" : "Get historical amount specified by a daterange."
+        }
+      },  
+      "/api/sales/unique/<unique>" : {
+        "get" : {
+          "tags" : [ "sales" ],
+          "summary" : "Get unique values",
+          "description" : "Dynamic request for getting unique attributes of the class sales."
+        }
+      },
+      "/api/prediction" : {
+        "get" : {
+          "tags" : [ "prediction" ],
+          "summary" : "Get all predictions",
+          "description" : "Get all prediction data with a intial pagesize of 100 and optional filtering for each parameter."
+        },
+        "post" : {
+          "tags" : [ "prediction" ],
+          "summary" : "Post new predictions",
+          "description" : "Post new prediction data according to the prediction class."
+        },
+        "put" : {
+          "tags" : [ "prediction" ],
+          "summary" : "Update predictions",
+          "description" : "Update prediction data according to the prediction class."
+        },
+        "delete" : {
+          "tags" : [ "prediction" ],
+          "summary" : "Delete all predictions",
+          "description" : "Delete all prediction data."
+        }
+      },
+      "/api/prediction/unique/<unique>" : {
+        "get" : {
+          "tags" : [ "prediction" ],
+          "summary" : "Get unique values",
+          "description" : "Dynamic request for getting unique attributes of the class prediction."
+        }
+      },
+      "/api/location" : {
+        "get" : {
+          "tags" : [ "location" ],
+          "summary" : "Get all locations",
+          "description" : "Get all location data with the corresponding attributes."
+        },
+        "post" : {
+          "tags" : [ "location" ],
+          "summary" : "Post new locations",
+          "description" : "Post new location data according to the prediction location."
+        }
+      },
+      "/api/location/id/<id>" : {
+        "put" : {
+          "tags" : [ "location" ],
+          "summary" : "Updaten single location",
+          "description" : "Update single location queried by ID."
+        },
+        "delete" : {
+          "tags" : [ "location" ],
+          "summary" : "Delete single location",
+          "description" : "Delete single location queried by ID."
+        }
+      },
+      "/operational/initiate" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Initiate new release",
+          "description" : "Runs the pipeline for the initiation of the data from a new release."
+        }
+      },
+      "/operational/run/initiate/<duration>" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Initiate & run",
+          "description" : "Runs the pipeline for the initiation of the data from a new release and the data engineering and data science pipeline for the defined duration."
+        }
+      },
+      "/operational/run/initiate/upload/<duration>" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Initiate, run & upload",
+          "description" : "Runs the pipeline for the initiation of the data from a new release, the data engineering and data science pipeline for the defined duration and the data upload pipeline to delete the old data and post the updated data to the predictions table of the database."
+        }
+      },
+      "/operational/run/<duration>" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Run pipeline",
+          "description" : "Runs the data engineering and data science pipeline for the defined duration."
+        }
+      },
+      "/operational/run/upload/<duration>" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Run & upload",
+          "description" : "Runs the data engineering and data science pipeline for the defined duration and the data upload pipeline to delete the old data and post the updated data to the predictions table of the database."
+        }
+      },
+      "/operational/upload" : {
+        "get" : {
+          "tags" : [ "operational" ],
+          "summary" : "Upload predictions",
+          "description" : "Runs the data upload pipeline to delete the old data and post the updated data to the predictions table of the database."
+        }
+      }
+    }
+  }

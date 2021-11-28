@@ -1,0 +1,55 @@
+version: '3.6'
+
+services:
+  api:
+    build: ./api
+    depends_on:
+      - db
+    environment:
+      STAGE: test
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://postgres:hallolevel3@db:5432/webers
+      SQLALCHEMY_HOST: db
+      SQLALCHEMY_USERNAME: postgres
+      SQLALCHEMY_PASSWORD: hallolevel3
+      OPERATIONAL_SERVICE: http://operational:8888
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    volumes:
+      - ./api/migrations:/usr/src/app/migrations
+    restart: always
+
+  db:
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hallolevel3
+      POSTGRES_DB: webers
+    image: postgres:12
+    networks:
+      - default
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - ./api/postgres-data:/var/lib/postgresql/data
+
+  operational:
+    build: ./operational
+    environment:
+      API_SERVER: http://api:5000
+    networks:
+      - default
+    ports:
+      - 8888:8888
+    restart: always
+
+  ui:
+    build: ./ui
+    environment:
+      API_SERVER: http://api:5000
+    networks:
+      - default
+    ports:
+      - 8501:8501
+    restart: always

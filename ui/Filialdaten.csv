@@ -1,0 +1,40 @@
+id_store,number_store,name_store,street,zip,city,state,store,lat,lon
+0,2,Filiale 2,Josef-Schmitt Str. 38,97922,Lauda - Königshofen,BW,Ja,49.5661,9.70608
+1,3,Filiale 3,Hauptstrasse 39,97941,Tauberbischofsheim,BW,Ja,49.62246,9.66302
+2,4,Filiale 4,Marktplatz 3,97980,Bad Mergentheim,BW,Ja,49.4912013,9.7729487
+3,5,Filiale 5,Zum Sportfeld 10,97922,Lauda-Kgh-Gerlachsh,BW,Ja,49.5795426,9.7099975
+4,14,Filiale 14,Krautgartenweg 6,97941,Tauberbischofsheim,BW,Ja,49.6298067,9.6680779
+5,17,Filiale 17,Unterschüperstrasse 22,97944,Boxberg-Unterschüpf,BW,Ja,49.5145023,9.689236
+6,18,Filiale 18,Boxberger Straße 1,97980,Bad Mergentheim,BW,Ja,49.489764799999996,9.769213800000001
+7,19,Filiale 19,Karl-Hofmann-Strasse 4,97944,Boxberg,BW,Ja,49.479795700000004,9.6370461
+8,20,Filiale 20,Hofstrasse 6,74722,Buchen,BW,Ja,49.5214732,9.3250045
+9,21,Filiale 21,Keplerstraße 2,97980,Bad Mergentheim,BW,Ja,49.4890887,9.7822153
+10,22,Filiale 22,Daimlerstraße 1,74722,Buchen,BW,Ja,49.52939000000001,9.33372
+11,23,Filiale 23,Hauptstraße 11,97947,Grünsfeld,BW,Ja,49.60758999999999,9.7445615
+12,24,Filiale 24,Albert-Schweitzer-Str.13,97941,Tauberbischofsheim,BW,Ja,49.6254934,9.670121
+13,25,Filiale 25,Miltenberger Straße 48,63927,Bürgstadt,BY,Ja,49.7059146,9.262844900000001
+14,26,Filiale 26,Marktplatz 3,97990,Weikersheim,BW,Ja,49.4804506,9.8979577
+15,27,Filiale 27,Hans-Heinrich-EhrlerPl.24,97980,Bad Mergentheim,BW,Ja,49.48994159999999,9.7726648
+16,28,Filiale 28,Tauberstr. 9,97922,Lauda-Königshofen,BW,Ja,49.568956799999995,9.708362900000001
+17,29,Filiale 29,Herrenwiesen Straße 40,97980,Bad Mergentheim,BW,Ja,49.497510600000005,9.7666999
+18,30,Filiale 30,Goldbachstr.3,97999,Igersheim,BW,Ja,49.4930473,9.8168882
+19,31,Filiale 31,Zur Altenau 2,97941,Tauberbischofsheim,BW,Ja,49.6344973,9.654711
+20,32,Filiale 32,Ferdinand-Müller-Straße 2,74736,Hardheim,BW,Ja,49.61801579999999,9.4752553
+21,33,Filiale 33,Hauptstrasse 84,97922,Lauda-Königshofen,BW,Ja,49.54320999999999,9.733951300000001
+22,34,Filiale 34,Obere Torgasse 23,97922,Lauda-Königshofen,BW,Ja,49.570459299999996,9.700462400000001
+23,35,Filiale 35,Hauptstraße 7,97941,Tauberbischofsheim,BW,Ja,49.621765100000005,9.6592768
+24,36,Filiale 36,Härterichstr 7,97980,Bad Mergentheim,BW,Ja,49.4928,9.77328
+25,37,Filiale 37,Oberstettener Straße,97996,Niederstetten,BW,Ja,49.3738545,9.947595300000001
+26,38,Filiale 38,Bestenheider-Landstr. 70,97877,Wertheim,BW,Ja,49.7817511,9.5047465
+27,40,Filiale 40,Brücknerstraße 6,97080,Würzburg,BY,Ja,49.8021797,9.944243
+28,41,Filiale 41,Weingartenstr.24,97072,Würzburg,BY,Ja,49.783968200000004,9.9348883
+29,43,Filiale 43,Hauptstraße 37,97204,Höchberg,BY,Ja,49.78313,9.87979
+30,44,Filiale 44,Eichhornstr. 14,97070,Würzburg,BY,Ja,49.795536,9.9338314
+31,45,Filiale 45,Frankfurterstr.20,97082,Würzburg,BY,Ja,49.7948338,9.9134416
+32,46,Filiale 46,Löffelgasse 1,97084,Würzburg,BY,Ja,49.76412000000001,9.95005
+33,47,Filiale 47,Geschwister-Scholl-Platz,97084,Würzburg,BY,Ja,49.788987299999995,9.935599400000001
+34,48,Filiale 48,Kaiserstraße 27,97070,Würzburg,BY,Ja,49.7997427,9.9344076
+35,49,Filiale 49,Erthalstr. 38,97076,Würzburg,BY,Ja,49.7842,9.94736
+36,50,Filiale 50,Augustinerstr. 2,97070,Würzburg,BY,Ja,49.7925244,9.928436900000001
+37,70,Filiale 70,Turmstr.13,74706,Osterburken,BW,Ja,49.4311309,9.4269506
+38,71,Filiale 71,Wertheimerstr.38,74736,Hardheim,BW,Ja,49.60994470000001,9.4725004

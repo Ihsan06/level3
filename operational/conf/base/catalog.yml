@@ -1,0 +1,80 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+filialdata:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/Filialdaten.csv
+
+fdict:
+  type: pickle.PickleDataSet
+  filepath: data/01_raw/fdict.p
+
+fdict!:
+  type: pickle.PickleDataSet
+  filepath: data/01_raw/fdict.p
+
+regressordict:
+    #dict with models for operational prediction
+    type: pickle.PickleDataSet
+    filepath: data/01_raw/regressordict.p
+
+seo_frame:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/seo_frame.csv  
+
+salesdata:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/salesdata.csv
+
+api_length:
+    type: pickle.PickleDataSet
+    filepath: data/02_intermediate/api_length.p
+
+pred_dates:
+    #dict with models for operational prediction
+    type: pickle.PickleDataSet
+    filepath: data/02_intermediate/pred_dates.p
+    
+#03primary:
+#Domain specific data model(s) containing cleansed, transformed and wrangled data from either raw or intermediate, which
+#forms your layer that you input into your feature engineering.
+
+sales_lag:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/sales_lag.csv
+
+basedict:
+  # initial dict with sales data by shop and article
+  type: pickle.PickleDataSet
+  filepath: data/03_primary/basedict.p
+
+weatherdict:
+  type: pickle.PickleDataSet
+  filepath: data/03_primary/weatherdict.p
+
+weatherdict!: # drop? -> no cronocoding; problem: future weather 
+  type: pickle.PickleDataSet
+  filepath: data/03_primary/weatherdict.p
+
+sales_lag:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/sales_lag.csv
+  
+#04Feature:
+  #Analytics specific data model(s) containing a set of features defined against the primary data, which are grouped by
+  #feature area of analysis and stored against a common dimension.
+
+filfeaturedict:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/filfeaturedict.p
+
+preddict:
+  #dict with added predictions per shop and article
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/preddict.p
+
+postframe:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/postframe.csv

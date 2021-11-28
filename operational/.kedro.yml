@@ -1,0 +1,6 @@
+context_path: op_logik.run.ProjectContext
+project_name: "Operative Logik"
+project_version: "0.16.6"
+package_name: "op_logik"
+hooks:
+  - op_logik.hooks.project_hooks

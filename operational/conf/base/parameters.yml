@@ -1,0 +1,24 @@
+server_link: 'nix'
+# api length determined by function
+repository: 'ProjectLevel3/Experimentierumgebung'
+rawtoken: "1e6bb05767a29a153679545b4ab713540f4213ed"
+pred_duration: 5
+start_date: '2019-04-23' # date for fist prediction
+weatherkey: 'f3de6e9304154ea2bb0200215202312'
+lags_used: [7, 14, 21, 28]
+features: [
+    'discount',
+    'wochentag',
+    'monat',
+    'datecode',
+    'lag_7',
+    'lag_14',
+    'lag_21',
+    'lag_28',
+    'sunhour', 
+    'weathercodes',
+    'feels_like'
+    ]
+explain_categories: {weather : ['sunhour', 'weathercodes','feels_like', 'heat_index'],
+lastmonth: ['lag_7', 'datelag_7', 'lag_14', 'datelag_14', 'lag_21', 'datelag_21', 'lag_28', 'datelag_28'],
+dayspecific : ['discount', 'wochentag', 'monat', 'datecode']}
